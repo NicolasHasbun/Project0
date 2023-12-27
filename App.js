@@ -6,13 +6,12 @@ import store from './src/Store/store';
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-    'Josefin-Regular': require('./src/fonts/JosefinSans-Regular.ttf')
+    'Josefin': require('./src/fonts/JosefinSans-Regular.ttf')
   });
 
   if (!fontsLoaded) {
     return null;
   }
-
   return (
     <Provider store={store}>
       <Navigator/>
